@@ -2,7 +2,7 @@
 using namespace std;
 void move_all_zeroes_to_end(int ar[],int n)
 {
-   /*
+   
    int count=0;
 
    for(int i=0;i<n;i++)
@@ -12,7 +12,7 @@ void move_all_zeroes_to_end(int ar[],int n)
         swap(ar[i],ar[count]);
         count++;
        }
-   }*/
+   }
 
    
 }
