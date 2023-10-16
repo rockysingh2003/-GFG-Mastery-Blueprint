@@ -12,6 +12,7 @@ int getSingleElement(vector<int> &arr)
     xorr=xorr^arr[i];
   }
   return xorr;
+  
 }
 
 
