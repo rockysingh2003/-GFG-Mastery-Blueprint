@@ -1,0 +1,4 @@
+whenever we are working by the use of lower bound ,actually we are working on the right hand side of the array
+with condition that smallest element in the array>=x;
+
+Whereas when we are working by the ue of upper,then we are working on the left hand side.
