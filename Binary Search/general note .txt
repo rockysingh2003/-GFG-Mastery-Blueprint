@@ -2,3 +2,18 @@ whenever we are working by the use of lower bound ,actually we are working on th
 with condition that smallest element in the array>=x;
 
 Whereas when we are working by the ue of upper,then we are working on the left hand side.
+
+# Navigate to your project folder (if not already there)
+cd /path/to/your/project/folder
+
+# Add new or modified files to the staging area
+git add .
+
+# Commit changes with a descriptive message
+git commit -m "Daily update: Add new files or make changes"
+
+# Push changes to GitHub
+git push
+
+
+
