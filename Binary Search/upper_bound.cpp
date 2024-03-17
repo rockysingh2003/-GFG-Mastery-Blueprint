@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-int low(vector<int> ar, int size, int x)
+int up(vector<int> ar, int size, int x)
 {
     int lower = 0;
     int higher = size - 1;
@@ -31,7 +31,7 @@ int main()
     vector<int> ar = {3,5,8,9,15,19};
     int sizeOfarray = ar.size();
     int x = 9;
-    int result = low(ar, sizeOfarray, x);
+    int result = up(ar, sizeOfarray, x);
     cout << "\n the answer is " << result;
     return 0;
 }
