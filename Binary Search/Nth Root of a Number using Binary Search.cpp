@@ -36,6 +36,7 @@ int main()
     return 0;
 }*/
 
+/*
 #include <bits/stdc++.h>
 using namespace std;
 int checking(long long int middle, int n, int m)
@@ -96,7 +97,9 @@ int main()
     return 0;
 }
 
-/*
+*/
+
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -145,4 +148,3 @@ int main()
     return 0;
 }
 
-*/
