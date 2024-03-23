@@ -42,6 +42,7 @@ int main()
     return 0;
 }*/
 
+/*
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -66,11 +67,69 @@ int divisor(vector<int> &ar, int threshold)
 
 int main()
 {
-    vector<int> ar = {8,4,2,3};
+    vector<int> ar = {1, 2, 3, 4, 5};
     int threshold = 10;
 
     int result = divisor(ar, threshold);
 
+    if (result == -1)
+    {
+        cout << "\n No divisor is possible." << endl;
+    }
+    else
+    {
+        cout << "\n The divisor is " << result << endl;
+    }
+    return 0;
+}
+
+*/
+
+#include <bits/stdc++.h>
+using namespace std;
+bool divide_kar_array_ko(vector<int> &ar, int middle, int threshold)
+{
+    int sum = 0;
+    int n = ar.size();
+    for (int i = 0; i < n; i++)
+    {
+        sum += ceil(double(ar[i]) / double(middle));
+    }
+
+    if (sum <= threshold)
+        return true;
+        else
+            return false;
+}
+
+int divisor(vector<int> &ar, long double threshold)
+{
+    int lower = 1;
+    int higher = *max_element(ar.begin(), ar.end());
+    long double ans = -1;
+    while (lower <= higher)
+    {
+        long double middle = lower + (higher - lower) / 2;
+
+        if (divide_kar_array_ko(ar, middle, threshold) == true)
+        {
+            ans = middle;
+            higher = middle - 1;
+        }
+        else
+        {
+            lower = middle + 1;
+        }
+    }
+
+    return ans;
+}
+
+int main()
+{
+    vector<int> ar = {8, 4, 2, 3};
+    int threshold = 10;
+    int result = divisor(ar, threshold);
     if (result == -1)
     {
         cout << "\n No divisor is possible." << endl;
