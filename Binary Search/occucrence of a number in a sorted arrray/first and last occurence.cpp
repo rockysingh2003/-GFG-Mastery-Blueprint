@@ -1,24 +1,28 @@
 #include<bits/stdc++.h>
 using namespace std;
-vector<int> occurence(vector<int> &arr,int size,int target)
+vector<int> occurence(vector<int> &nums,int size,int target)
 {
-    int start = -1, end = -1;
-    for (int i = 0; i < size;i++)
+    int startingPosition = -1, endingPosition = -1;
+    int n = nums.size();
+    for (int i = 0; i < n; i++)
     {
-        if(arr[i]==target)
+        if (nums[i] == target)
         {
-            if(start==-1)
-            {
-                start = i;
-            }
-            else
-            {
-                end = i;
-            }
+            startingPosition = i;
+            break;
         }
     }
+    for (int i = n - 1; i >= 0; i--)
+    {
+        if (nums[i] == target)
+        {
+            endingPosition = i;
+            break;
+        }
+    }
+    return {startingPosition, endingPosition};
 
-    return {start, end};
+    return {startingPosition, endingPosition};
 }
 
 int main()
